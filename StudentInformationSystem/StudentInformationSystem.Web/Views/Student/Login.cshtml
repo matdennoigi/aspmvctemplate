@@ -1,0 +1,19 @@
+﻿@model StudentInformationSystem.Web.Models.Student.LoginModel
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Login</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.DisplayNameFor(model => model.Username);
+    @Html.EditorFor(model => model.Username);
+
+    @Html.DisplayNameFor(model => model.Password);
+    @Html.PasswordFor(model => model.Password);
+
+    <input type="submit" value="Đăng nhập"/>
+}
+
